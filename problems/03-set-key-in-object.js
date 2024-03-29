@@ -23,8 +23,8 @@ function setKeyInObject(obj, string, value) {
 let obj = {}
 setKeyInObject(obj, "apple", "yum"); // => {apple: "yum"}
 
-// let obj1 = {str: "hello"}
-// setKeyInObject(obj1, "num", 3); // => {str: "hello", num: 3}
+let obj1 = {str: "hello"}
+setKeyInObject(obj1, "num", 3); // => {str: "hello", num: 3}
 
 // let cat = {};
 // function catBuilder(name, color, toys) {
