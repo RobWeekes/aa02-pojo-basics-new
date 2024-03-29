@@ -19,10 +19,11 @@ valuesInObject(foods); // => ["tart", "sour", "sweet"]
 function valuesInObject(obj) {
     let arr = [];
     for(let keys in obj) {
-        console.log(obj[keys])
-        arr.push(obj[keys]);
-        console.log(arr);
+        let values = obj[keys];
+        // console.log(values)
+        arr.push(values);
     }
+    console.log(arr);
     return arr;
 }
 
