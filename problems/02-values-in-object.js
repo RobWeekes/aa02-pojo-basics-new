@@ -16,6 +16,7 @@ valuesInObject(foods); // => ["tart", "sour", "sweet"]
 //     return Object.values(obj);
 // }
 
+
 function valuesInObject(obj) {
     let arr = [];
     for(let keys in obj) {
@@ -31,6 +32,7 @@ let animals = {dog: "Wolfie", cat: "Jet", bison: "Bilbo"}
 let foods = {apple: "tart", lemon: "sour", mango: "sweet"}
 valuesInObject(animals); // => ["Wolfie", "Jet", "Bilbo"]
 valuesInObject(foods); // => ["tart", "sour", "sweet"]
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = valuesInObject;

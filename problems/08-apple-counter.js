@@ -1,7 +1,7 @@
 /***********************************************************************
-Write a function `appleCounter(appleObj)` that takes in an object containing a 
+Write a function `appleCounter(appleObj)` that takes in an object containing a
 number of keys that have the word 'apple' contained within them. The `appleCounter`
-function will be in charge of returning the number of keys that contain the word 
+function will be in charge of returning the number of keys that contain the word
 "apple".
 
 **Hint**: you may want to take all the keys and lower case them for easier
@@ -28,9 +28,53 @@ let obj3 = {
 appleCounter(obj3); // => 3
 ***********************************************************************/
 
+
 function appleCounter(appleObj) {
-  // Your code here 
+    let keys = Object.keys(appleObj);
+    console.log(keys);
+    console.log(appleObj);
+
+    let count = 0;
+    keys.forEach((key) => {
+        console.log(key);
+        key = key.toLowerCase();            // easier way to ignore case
+        console.log(key);
+
+        if(key.includes('apple')) {
+        // OR needed without .toLowerCase method ---
+        // if(key.includes('apple') || key.includes('Apple')) {
+            console.log(key.includes('apple'));
+            count++;
+        }
+    });
+    console.log(count);
+    return count;
 }
+
+// play code ---
+let vowels = 'aeiou';
+console.log(vowels.includes('truck'));
+console.log(vowels.includes('e'));
+
+// play code ---
+
+let obj = { banana: "yay!" };
+console.log(appleCounter(obj)); // => 0
+
+let obj1 = { crabapple: "yum!" };
+console.log(appleCounter(obj1)); // => 1
+
+let obj2 = { crabapple: "yum!", honeyapple: "super yum", banana: "yay" };
+console.log(appleCounter(obj2)); // => 2
+
+let obj3 = {
+  crabApple: "yum!",
+  honeyApple: "super yum",
+  banana: "yay",
+  bigapple: "NYC"
+};
+console.log(appleCounter(obj3)); // => 3
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = appleCounter;

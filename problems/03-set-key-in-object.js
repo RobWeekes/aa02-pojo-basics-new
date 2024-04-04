@@ -13,8 +13,9 @@ let obj1 = {str: "hello"}
 setKeyInObject(obj1, "num", 3); // => {str: "hello", num: 3}
 ***********************************************************************/
 
-function setKeyInObject(obj, string, value) {
 
+function setKeyInObject(obj, string, value) {
+    // obj.string = value; // does not work, names the key 'string' not apple
     obj[string] = value;
     console.log(obj);
     return obj;
